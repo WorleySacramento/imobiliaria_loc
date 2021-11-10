@@ -3,7 +3,7 @@ require_once 'database.php';
 
 if( isset($_POST['btn_cadastro'])): 
     $tipoap = mysqli_escape_string($connect, $_POST['tipoap']);
-    $telap = mysqli_escape_string($connect, $_POST['teloap']);
+    $telap = mysqli_escape_string($connect, $_POST['telap']);
     $locap= mysqli_escape_string($connect, $_POST['locap']);
 
     $sql = "INSERT INTO apartamento (tipo, telefone, localizacao) VALUES ('$tipoap', '$telap', '$locap') ";

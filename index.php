@@ -1,7 +1,4 @@
-<?php
-include_once 'apartamentos.html';
 
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -17,9 +14,9 @@ include_once 'apartamentos.html';
     <!--Menu-->
     <nav class="menu navbar navbar-expand">
         <div class=" nav">
-          <div><a href="index.html">Home</a></div>
+          <div><a href="index.php">Home</a></div>
           <br><br>
-          <div><a href="apartamentos.html">Apartamentos</a></div>
+          <div><a href="apartamentos.php">Apartamentos</a></div>
           <div><a href="casas.html">Casas</a></div>
           <div> <a href="contatos.html">Fale Conosco</a></div>
         </div>

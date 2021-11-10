@@ -1,3 +1,7 @@
+<?php
+include_once 'database.php';
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,29 +31,36 @@
     <div class="container">
         <div class="row">
             <div class="col ">
-                <h2>Novo imóvel</h2>
-                <form action="create.php" method="POST">
-                    <div>
-                        <label for="tipoap" id="tipoap">Tipo</label>
-                        <input type="text" name="tipoap" id="tipoap">
+                <h2>Apartamentos para Alugar</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="">Tipo</th>
+                            <th scope="">Telefone</th>
+                            <th scope="">Localizaçao</th>
 
-                    </div>
+                        </tr>
 
-                    <div>
-                        <label for="telap" id="telap">Telefone</label>
-                        <input type="text" name="telap" id="telap">
-
-                    </div>
-
-                    <div>
-                        <label for="locap" id="locap">Localização</label>
-                        <input type="text" name="locap" id="locap">
-
-                    </div>
-                    <button type="submit" name="btn_cadastro">cadastro</button>
-                    <a class=" btn-info" href="index.php">Lista imoveis</a>
-                </form>
-
+                    </thead>
+                    <tbody>
+                        <?php
+                            $sql = "SELECT * FROM apartamento";
+                            $resultado = mysqli_query($connect, $sql);
+                            while($dados = mysqli_fetch_array($resultado)):
+                        ?>
+                        <tr>
+                            <td> <?php echo $dados['tipo'] ?></td>
+                            <td> <?php echo $dados['telefone']; ?></td>
+                            <td> <?php echo $dados['localizacao']; ?> </td>
+                            <td><a href="" class=" btn-warning"><i class="fas fa-pen-square"></i> editar</a></td>
+                            <td><a href="" class=" btn-warning"><i class="fas fa-trash"></i> remover</a></td>
+                        </tr>
+                       <?php
+                       endwhile;
+                       ?>         
+                    </tbody>
+                </table>
+                <a href="adicionar.php" class=" btn-primary">Adicionar imovel</a>
             </div>
         </div>
 
