@@ -29,7 +29,7 @@ session_start();
                             <a href="index.php" class=" nav-item nav-link" id="home-menu">Home</a>
                             <a href="apartamentos.php" class=" nav-item nav-link" id="apart-menu">Apartamentos</a>
                             <a href="cadastrar.php" class=" nav-item nav-link" id="cad-menu">Cadastrar imovel</a>
-                            <a href="contatos.php" class=" nav-item nav-link" id="contato-menu">Fale Conosco</a>
+                            
                         </div>
                     </div>
                     <br><br>
@@ -42,24 +42,24 @@ session_start();
 
 
         <div class="container d-lg-flex justify-content-center">
-            <div class=" ">
+            <div class=" form-group">
                 <h2>Novo imóvel</h2>
                 <form class="form form-control form-check-inline " action="create.php" method="POST">
 
-                    <div class="form-control form-check-inline mb-3">
+                    <div class="form-control mb-3">
                         <label for=""> CEP <input type="text" placeholder="CEP" name="cep" id="cep" onblur="pesquisacep(this.value);"></label>
                     </div>
                     <div class="form-control mb-3">
                         <label for="">Rua <input type="text" placeholder="Rua" name="rua" id="rua"></label>
                     </div>
                     <div class="form-control mb-3">
-                        <label for="">Bairro <input type="text" placeholder="Bairro" name="bairro" id="bairro"></label>
+                        <label class=" form-check-label"  for="">Bairro <input type="text" placeholder="Bairro" name="bairro" id="bairro"></label>
                     </div>
-                    <div class="form-control mb-3">
-                        <label for="">Cidade <input type="text" placeholder="Cidade" name="cidade" id="cidade"></label>
-                    </div class="form-control mb-3">
+                    <div class="form-control form-label mb-3">
+                        <label class=" form-check-label"  for="">Cidade <input  type="text" placeholder="Cidade" name="cidade" id="cidade"></label>
+                    </div>
                     <div class="form-control">
-                        <label for="">Estado <input type="text" placeholder="uf" name="uf" id="uf"></label>
+                        <label class=" form-check-label" for="">Estado <input  class=" form" type="text" placeholder="uf" name="uf" id="uf"></label>
                     </div>
 
                     <div class="form-control mb-3">
