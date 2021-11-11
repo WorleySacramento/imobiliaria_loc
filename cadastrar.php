@@ -37,14 +37,12 @@ session_start();
             <div class="col ">
                 <h2>Novo imóvel</h2>
                 <form action="create.php" method="POST">
-                     
-                   
+               
                     <div><label for=""> CEP <input type="text" placeholder="CEP" name="cep" id="cep" onblur="pesquisacep(this.value);" ></label></div>
                     <div><label for="">Rua <input type="text" placeholder="Rua" name="rua" id="rua" ></label> </div>
                     <div><label for="">Bairro <input type="text" placeholder="Bairro" name="bairro" id="bairro"  ></label> </div>
                     <div><label for="">Cidade <input type="text" placeholder="Cidade" name="cidade" id="cidade"  ></label> </div>
                     <div><label for="">Estado <input type="text" placeholder="uf" name="uf" id="uf"  ></label> </div>
-
 
                     <div>
                         <label for="tipo" id="tipo">Tipo</label>
@@ -58,17 +56,8 @@ session_start();
 
                     </div>
 
-                   
-
-                        
-                        
-                        
-                        
-                 
-                   
-
-                    <button type="submit" value="cadastro" name="btn_cadastro">cadastro </button>
-                    <a class=" btn-info" href="apartamentos.php">Lista imoveis</a>
+                    <button type="submit" class=" btn-primary" href="index.php" >cadastro </button>
+                    <a type="btn" class=" btn-info" href="apartamentos.php">Lista imoveis</a>
                 </form>
 
             </div>
