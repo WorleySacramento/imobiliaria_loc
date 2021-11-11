@@ -1,4 +1,7 @@
 <?php
+
+
+
 include_once 'database.php';
 
 ?>
@@ -15,29 +18,34 @@ include_once 'database.php';
 </head>
 
 <body>
+<div class="container">
     <!--Menu Principal-->
     <nav class="menu navbar navbar-expand">
         <div class=" nav">
             <div><a href="index.php">Home</a></div>
             <br><br>
             <div><a href="apartamentos.php">Apartamentos</a></div>
-            <div><a href="casas.html">Casas</a></div>
-            <div> <a href="contatos.html">Fale Conosco</a></div>
+            <div><a href="cadastrar.php" >Cadastrar imovel</a></div>
+            <div> <a href="contatos.php">Fale Conosco</a></div>
         </div>
     </nav>
     <!--Fim menu principal-->
     <br><br><br><br>
 
-    <div class="container">
+    
         <div class="row">
             <div class="col ">
                 <h2>Apartamentos para Alugar</h2>
-                <table class="table">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th scope="">Tipo</th>
                             <th scope="">Telefone</th>
-                            <th scope="">Localizaçao</th>
+                            <th scope="">Cep</th>
+                            <th scope="">Rua</th>
+                            <th scope="">Bairro</th>
+                            <th scope="">Cidade</th>
+                            <th scope="">Estado</th>
 
                         </tr>
 
@@ -51,8 +59,12 @@ include_once 'database.php';
                         <tr>
                             <td> <?php echo $dados['tipo'] ?></td>
                             <td> <?php echo $dados['telefone']; ?></td>
-                            <td> <?php echo $dados['localizacao']; ?> </td>
-                            <td><a href="" class=" btn-warning"><i class="fas fa-pen-square"></i> editar</a></td>
+                            <td> <?php echo $dados['cep'];?> </td>
+                            <td> <?php echo $dados['rua'];?> </td>
+                            <td> <?php echo $dados['bairro'];?> </td>
+                            <td> <?php echo $dados['cidade'];?> </td>
+                            <td> <?php echo $dados['estado'];?> </td>
+                            <td><a href="editar.php?id=<?php echo $dados['id'] ?>" class=" btn-warning"><i class="fas fa-pen-square"></i> editar</a></td>
                             <td><a href="" class=" btn-warning"><i class="fas fa-trash"></i> remover</a></td>
                         </tr>
                        <?php
@@ -60,7 +72,7 @@ include_once 'database.php';
                        ?>         
                     </tbody>
                 </table>
-                <a href="adicionar.php" class=" btn-primary">Adicionar imovel</a>
+                
             </div>
         </div>
 

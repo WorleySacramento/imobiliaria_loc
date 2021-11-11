@@ -1,4 +1,12 @@
+<?php
 
+
+
+if(isset($_SESSION['mensagem'])):
+  echo $_SESSION['mensagem'];
+endif;
+session_unset();
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,21 +19,42 @@
     <title>ImóveLLoc</title>
 </head>
 <body>
-    <!--Menu-->
-    <nav class="menu navbar navbar-expand">
+  <div class="container">
+     <!--Menu Principal-->
+     <nav class="menu navbar navbar-expand">
         <div class=" nav">
-          <div><a href="index.php">Home</a></div>
-          <br><br>
-          <div><a href="apartamentos.php">Apartamentos</a></div>
-          <div><a href="casas.html">Casas</a></div>
-          <div> <a href="contatos.html">Fale Conosco</a></div>
+            <div><a href="index.php">Home</a></div>
+            <br><br>
+            <div><a href="apartamentos.php">Apartamentos</a></div>
+            <div><a href="cadastrar.php" >Cadastrar imovel</a></div>
+            <div> <a href="contatos.php">Fale Conosco</a></div>
         </div>
-  </nav>
-  <!--Fim menu-->
+    </nav>
+    <!--Fim menu principal-->
+
     <br><br><br><br>
     <h1>O seu lar, no lugar certo!</h1>
     <p>Sua casa dos sonhos!!</p>
 
+
+
+
+  </div>
+   
+    
+
+
+
+
+
+
+    <script>
+      window.onload = function(){
+        toast.show($_SESSION['mensagem']);{
+          ""
+        }
+      }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

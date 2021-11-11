@@ -1,16 +1,19 @@
 <?php
-require_once 'database.php';
+session_start();
 
-if( isset($_POST['btn_cadastro'])): 
-    $tipoap = mysqli_escape_string($connect, $_POST['tipoap']);
-    $telap = mysqli_escape_string($connect, $_POST['telap']);
-    $locap= mysqli_escape_string($connect, $_POST['locap']);
+require_once ("database.php"); ///antes era require///
 
-    $sql = "INSERT INTO apartamento (tipo, telefone, localizacao) VALUES ('$tipoap', '$telap', '$locap') ";
 
-    if(mysqli_query($connect, $sql));
-        header('location: index.php?sucesso');
-    else:    
-        header('location: index.php?erro');
-    
-endif;   
+    $tipo = mysqli_real_escape_string($connect, $_POST['tipo']);
+    $tel = mysqli_real_escape_string($connect, $_POST['tel']);
+    $cep= mysqli_real_escape_string($connect, $_POST['cep']);
+    $rua= mysqli_real_escape_string($connect, $_POST['rua']);
+    $bairro= mysqli_real_escape_string($connect, $_POST['bairro']);
+    $cidade= mysqli_real_escape_string($connect, $_POST['cidade']);
+    $uf= mysqli_real_escape_string($connect, $_POST['uf']);
+
+    $sql = "INSERT INTO apartamento (tipo, telefone, cep, rua, bairro, cidade, estado) 
+    VALUES ('$tipo', '$tel', '$cep','$rua', '$bairro', '$cidade', '$uf') ";
+
+   $sql = mysqli_query($connect, $sql);
+?>
