@@ -11,8 +11,10 @@
         $cidade= mysqli_real_escape_string($connect, $_POST['cidade']);
         $uf= mysqli_real_escape_string($connect, $_POST['uf']);
 
-        $sql = "INSERT INTO apartamento (tipo, telefone, cep, rua, bairro, cidade, estado) 
-        VALUES ('$tipo', '$tel', '$cep','$rua', '$bairro', '$cidade', '$uf') ";
+        $id= mysqli_real_escape_string($connect, $_POST['id']);
+
+        $sql = "UPDATE apartamento SET tipo = '$tipo', telefone = '$tel', cep = '$cep', 
+        rua = '$rua', bairro = '$bairro' cidade = '$cidade' uf = '$uf' WHERE id ='$id' ";
   
         $sql = mysqli_query($connect, $sql);
                header('location: index.php? sucesso');
