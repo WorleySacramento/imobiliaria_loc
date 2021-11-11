@@ -34,7 +34,7 @@ $dados = mysqli_fetch_array($resultado);
                         <div class="navbar-nav">
                             <a href="index.php" class=" nav-item nav-link" id="home-menu">Home</a>
                             <a href="apartamentos.php" class=" nav-item nav-link" id="apart-menu">Apartamentos</a>
-                            <a href="cadastrar.php" class=" nav-item nav-link" id="cad-menu">Cadastrar imovel</a>
+                            <a href="cadastrar.php" class=" nav-item nav-link" id="cad-menu">Cadastrar imóvel</a>
                             
                         </div>
                     </div>

@@ -26,37 +26,50 @@ session_unset();
     <div class="container" id="nav-container">
       <!--Menu Principal-->
       <nav class="fixed-top navbar navbar-expand-lg">
-          <div class=" collapse navbar-collapse justify-content" id="navbar-links">
-            <div class="navbar-nav">
+        <div class=" collapse navbar-collapse justify-content" id="navbar-links">
+          <div class="navbar-nav">
             <a href="index.php" class=" nav-item nav-link" id="home-menu">Home</a>
             <a href="apartamentos.php" class=" nav-item nav-link" id="apart-menu">Apartamentos</a>
-            <a href="cadastrar.php" class=" nav-item nav-link" id="cad-menu">Cadastrar imovel</a>
-           
-            </div>
+            <a href="cadastrar.php" class=" nav-item nav-link" id="cad-menu">Cadastrar imóvel</a>
+
           </div>
-          <br><br>
-         
+        </div>
+        <br><br>
+
       </nav>
       <!--Fim menu principal-->
     </div>
   </header>
-
+<br><br>
   <div class="container">
-
-
-    <br><br><br><br>
-    <h1>O seu lar, no lugar certo!</h1>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./img/pngegg.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/pred2.png" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="./img/img2.png" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
     <p>Sua casa dos sonhos!!</p>
-
-
-
 
   </div>
 
 
   <script src="./js/script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

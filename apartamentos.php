@@ -27,7 +27,7 @@ include_once 'database.php';
                     <div class="navbar-nav">
                         <a href="index.php" class=" nav-item nav-link" id="home-menu">Home</a>
                         <a href="apartamentos.php" class=" nav-item nav-link" id="apart-menu">Apartamentos</a>
-                        <a href="cadastrar.php" class=" nav-item nav-link" id="cad-menu">Cadastrar imovel</a>
+                        <a href="cadastrar.php" class=" nav-item nav-link" id="cad-menu">Cadastrar imóvel</a>
 
                     </div>
                 </div>
@@ -44,7 +44,7 @@ include_once 'database.php';
         <br><br><br><br>
 
 
-        <div class="table-responsive container-fluid vw-100">
+        <div class="table-responsive container-fluid">
             <div class="table-wrapper  ">
                 <h2>Apartamentos para Alugar</h2>
                 <table class="table table-sm table-hover table-fluid table-bordered">
